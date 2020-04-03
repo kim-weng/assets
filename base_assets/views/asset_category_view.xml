@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="asset_category_form_view" model="ir.ui.view">
+        <field name="name">asset.category Form</field>
+        <field name="model">asset.category</field>
+        <field name="arch" type="xml">
+            <form string="Asset Category">
+                <header>
+                </header>
+                <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                </div>
+                <group>
+                    <field name="code"/>
+                    <field name="parent_id"/>
+                    <field name="asset_account_id"/>
+                    <field name="asset_depreciation_account_id"/>
+                    <field name="asset_expense_account_id"/>
+                    <field name="journal_id"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="active"/>
+                </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="asset_category_tree_view" model="ir.ui.view">
+        <field name="name">asset.category Tree</field>
+        <field name="model">asset.category</field>
+        <field name="arch" type="xml">
+            <tree string="Asset Category">
+                <field name="complete_name" />
+                <field name="asset_account_id"/>
+                <field name="asset_depreciation_account_id"/>
+                <field name="asset_expense_account_id"/>
+                <field name="journal_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="asset_category_search" model="ir.ui.view">
+        <field name="name">asset.category Filter</field>
+        <field name="model">asset.category</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter name="closed" string="closed" domain="[('active','=', False)]"/>
+                <group expand="0" string="Group By...">
+                    <filter name="group_by_company_id" string="Companies" context="{'group_by':'company_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="asset_category_action" model="ir.actions.act_window">
+        <field name="name">asset.category</field>
+        <field name="res_model">asset.category</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to create new record.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_asset_root" name="Asset" sequence="80" />
+    <menuitem id="menu_asset_base" name="Base" sequence="10" parent="menu_asset_root"/>
+    <menuitem action="asset_category_action" id="menu_asset_category" name="Asset Category"
+        parent="menu_asset_base" sequence="10" />
+
+</odoo>

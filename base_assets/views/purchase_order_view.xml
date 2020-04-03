@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="purchase_order_form_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="next_oa" string="Start OA" type="object" class="oe_highlight"/>
+                <button name="next_oa" string="Next OA" type="object" class="oe_highlight"/>
+                <button name="action_view_oa" string="View OA" type="object"/>
+            </xpath>
+            <xpath expr="//field[@name='currency_id']"  position="after">
+                <field name="order_type" />
+                <!--<field nama="oa_state" />-->
+            </xpath>
+        </field>
+    </record>
+
+    <record id="purchase_order_form_inherit_assets" model="ir.ui.view">
+        <field name="name">purchase.order.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="mode">primary</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree//field[@name='product_id']"  position="attributes">
+                <attribute name="context">{'partner_id':parent.partner_id,
+                    'quantity':product_qty,
+                    'uom':product_uom,
+                    'company_id': parent.company_id,
+                    'select_asset': True}
+                </attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/form//field[@name='product_id']"  position="attributes">
+                <attribute name="context">{'partner_id': parent.partner_id,
+                    'select_asset': True}
+                </attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/form//field[@name='product_id']"  position="after">
+                <field name="asset_id"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree//field[@name='product_id']"  position="after">
+                <field name="asset_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_purchase_order_asset" model="ir.actions.act_window">
+        <field name="name">Assets for Purchase</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">purchase.order</field>
+        <field name="view_mode">tree,kanban,form,pivot,graph,calendar,activity</field>
+        <field name="context">{"default_order_type": "asset",
+            "select_asset": True}
+        </field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create a request for quotation
+            </p><p>
+            The quotation contains the history of the discussion
+            you had with your vendor.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_asset_order" name="Order" sequence="20" parent="menu_asset_root"/>
+    <menuitem action="action_purchase_order_asset" id="menu_purchase_assets" name="Assets Purchase"
+        parent="menu_asset_order" sequence="10"/>
+
+</odoo>

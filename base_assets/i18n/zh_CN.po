@@ -1,0 +1,909 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* base_assets
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20190130\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-24 02:47+0000\n"
+"PO-Revision-Date: 2019-10-24 02:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__account_move_id
+msgid "Account Move"
+msgstr "会计凭证"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_needaction
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_needaction
+msgid "Action Needed"
+msgstr "前置操作"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__active
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__active
+msgid "Active"
+msgstr "有效"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__amount
+msgid "Amount"
+msgstr "总额"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__amount_after
+msgid "Amount After"
+msgstr "之后金额"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__amount_before
+msgid "Amount Before"
+msgstr "之前金额"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__apply_department_id
+msgid "Apply Department"
+msgstr "申请部门"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__apply_employee_id
+msgid "Apply Employee"
+msgstr "申请员工"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__apply_user_id
+msgid "Apply Users"
+msgstr "申请用户"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__asset_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__asset_id
+#: model:ir.model.fields,field_description:base_assets.field_purchase_order_line__asset_id
+#: model:ir.model.fields,field_description:base_assets.field_stock_move__asset_id
+#: model:ir.module.category,description:base_assets.module_asset
+#: model:ir.module.category,name:base_assets.module_asset
+#: model:ir.ui.menu,name:base_assets.menu_asset_root
+#: model:ir.ui.menu,name:base_assets.menu_res_asset
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_move_line_search
+#: model_terms:ir.ui.view,arch_db:base_assets.product_template_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_form_view
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_tree_view
+#: selection:purchase.order,order_type:0
+#: selection:purchase.order.line,order_type:0
+msgid "Asset"
+msgstr "资产"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__asset_account_id
+msgid "Asset Account"
+msgstr "资产账户"
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_asset_category
+#: model:ir.model.fields,field_description:base_assets.field_product_product__asset_category_id
+#: model:ir.model.fields,field_description:base_assets.field_product_template__asset_category_id
+#: model:ir.ui.menu,name:base_assets.menu_asset_category
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_category_form_view
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_category_tree_view
+msgid "Asset Category"
+msgstr "资产类别"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__asset_depreciation_account_id
+msgid "Asset Depreciation Account"
+msgstr "资产折旧账户"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__asset_expense_account_id
+msgid "Asset Expend Account"
+msgstr "资产支出账户"
+
+#. module: base_assets
+#: model:res.groups,name:base_assets.group_asset_manager
+msgid "Asset Manager"
+msgstr "资产管理人"
+
+#. module: base_assets
+#: model:ir.ui.menu,name:base_assets.menu_asset_move_line
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_move_line_form_view
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_move_line_tree_view
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_form_view
+msgid "Asset Move Line"
+msgstr "资产移动行"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__move_line_ids
+msgid "Asset Move Lines"
+msgstr "资产移动多行"
+
+#. module: base_assets
+#: model:ir.ui.menu,name:base_assets.menu_asset_picking_order
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_form_view
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_tree_view
+msgid "Asset Picking"
+msgstr "资产领取"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_stock_picking__asset_picking_order_ids
+msgid "Asset Picking Order"
+msgstr "资产领取单"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_stock_move__asset_picking_order_id
+msgid "Asset Picking order"
+msgstr "资产领取单"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.view_company_form_inherit
+msgid "Asset Settings"
+msgstr "资产设置"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__move_ids
+msgid "Asset Stock Move"
+msgstr "资产库存移动"
+
+#. module: base_assets
+#: model:res.groups,name:base_assets.group_asset_user
+msgid "Asset User"
+msgstr "资产使用者"
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_res_asset
+msgid "Assets"
+msgstr "资产"
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_asset_move_line
+msgid "Assets Move Line"
+msgstr "资产移动行"
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_asset_picking_order
+msgid "Assets Picking Order"
+msgstr "资产领取单"
+
+#. module: base_assets
+#: model:ir.actions.act_window,name:base_assets.product_template_action_assets
+#: model:ir.ui.menu,name:base_assets.menu_product_template
+msgid "Assets Products"
+msgstr "资产产品"
+
+#. module: base_assets
+#: model:ir.ui.menu,name:base_assets.menu_purchase_assets
+msgid "Assets Purchase"
+msgstr "资产采购单"
+
+#. module: base_assets
+#: model:ir.actions.act_window,name:base_assets.action_purchase_order_asset
+msgid "Assets for Purchase"
+msgstr "采购资产"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_attachment_count
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数量"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__auto_confirm
+msgid "Auto-Confirm Assets"
+msgstr "自动确认资产"
+
+#. module: base_assets
+#: model:ir.ui.menu,name:base_assets.menu_asset_base
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_move_line_form_view
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_form_view
+msgid "Base"
+msgstr "基础"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_form_view
+msgid "Base Imformation"
+msgstr "基础信息"
+
+#. module: base_assets
+#: selection:asset.move.line,state:0
+#: selection:asset.picking.order,state:0
+msgid "Cancel"
+msgstr "取消"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__category_id
+msgid "Categories"
+msgstr "类别"
+
+#. module: base_assets
+#: model_terms:ir.actions.act_window,help:base_assets.asset_category_action
+#: model_terms:ir.actions.act_window,help:base_assets.asset_move_line_action
+#: model_terms:ir.actions.act_window,help:base_assets.asset_picking_order_action
+#: model_terms:ir.actions.act_window,help:base_assets.res_asset_action
+msgid "Click here to create new record."
+msgstr "单击此处创建新记录。"
+
+#. module: base_assets
+#: selection:res.asset,state:0
+msgid "Close"
+msgstr "关闭"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__code
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__code
+msgid "Code"
+msgstr "代码"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__sequence_line_id
+msgid "Code of Assets Sequence"
+msgstr "资产编号"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_form_view
+msgid "Comfirm"
+msgstr "确认"
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_res_company
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_category_search
+msgid "Companies"
+msgstr "公司"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__company_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__company_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__company_id
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__complete_name
+msgid "Complete Name"
+msgstr "完整名称"
+
+#. module: base_assets
+#: selection:asset.depreciation.line,state:0
+#: selection:asset.move.line,state:0
+#: selection:asset.picking.order,state:0
+msgid "Confirm"
+msgstr "确认"
+
+#. module: base_assets
+#: model_terms:ir.actions.act_window,help:base_assets.product_template_action_assets
+msgid "Create a new product"
+msgstr "创建新产品"
+
+#. module: base_assets
+#: model_terms:ir.actions.act_window,help:base_assets.action_purchase_order_asset
+msgid "Create a request for quotation"
+msgstr "创建一个采购询盘"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__create_uid
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__create_uid
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__create_uid
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__create_uid
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__create_date
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__create_date
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__create_date
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__create_date
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__currency_id
+msgid "Currency"
+msgstr "币种"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__date
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__date
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__date
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__date
+msgid "Date"
+msgstr "日期"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_company__default_asset_department_id
+msgid "Default Department of Assets"
+msgstr "资产默认部门"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_company__default_asset_employee_id
+msgid "Default Employee of Assets"
+msgstr "资产默认员工"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_company__default_asset_location_id
+msgid "Default Employee of Location"
+msgstr "资产默认位置"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_company__default_asset_warehouse_id
+msgid "Default Employee of Warehouse"
+msgstr "资产默认仓库"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__department_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__department_id
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__department_id
+#: model:ir.model.fields,field_description:base_assets.field_res_users__department_id
+#: model:ir.ui.menu,name:base_assets.menu_department
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_search
+msgid "Department"
+msgstr "部门"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_form_view
+msgid "Depreciation"
+msgstr "折旧"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__depreciation_line_ids
+msgid "Depreciation Lines"
+msgstr "折旧行"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__dest_department_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__dest_department_id
+msgid "Dest Department"
+msgstr "目的地部门"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__dest_employee_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__dest_employee_id
+msgid "Dest Employee"
+msgstr "目的员工"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__dest_location_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__dest_location_id
+msgid "Dest Location"
+msgstr "目的位置"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__dest_owner_department_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__dest_owner_department_id
+msgid "Dest Own Department"
+msgstr "目的所属部门"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__dest_owner_employee_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__dest_owner_employee_id
+msgid "Dest Own Employee"
+msgstr "目的所属员工"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__dest_warehouse_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__dest_warehouse_id
+msgid "Dest Warehouse"
+msgstr "目的仓库"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_form_view
+msgid "Detail Imformation"
+msgstr "详情"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__display_name
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__display_name
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__display_name
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__display_name
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: base_assets
+#: selection:asset.depreciation.line,state:0
+#: selection:asset.move.line,state:0
+#: selection:asset.picking.order,state:0
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_form_view
+msgid "Done"
+msgstr "完成"
+
+#. module: base_assets
+#: selection:asset.depreciation.line,state:0
+#: selection:asset.move.line,state:0
+#: selection:asset.picking.order,state:0
+#: selection:res.asset,state:0
+msgid "Draft"
+msgstr "草稿"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__employee_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__employee_id
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__employee_id
+#: model:ir.model.fields,field_description:base_assets.field_res_users__employee_id
+#: model:ir.ui.menu,name:base_assets.menu_employee
+msgid "Employee"
+msgstr "员工"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.view_users_form_inherit
+msgid "Employee Settings"
+msgstr "员工设置"
+
+#. module: base_assets
+#: selection:asset.picking.order,type:0
+msgid "Fix"
+msgstr "修理"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_follower_ids
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_channel_ids
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "关注者(渠道)"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_partner_ids
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者(业务伙伴)"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_category_search
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_move_line_search
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_search
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_search
+msgid "Group By..."
+msgstr "分组..."
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_form_view
+msgid "History Lines"
+msgstr "历史行"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__id
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__id
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__id
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__id
+msgid "ID"
+msgstr ""
+
+#. module: base_assets
+#: model:ir.model.fields,help:base_assets.field_asset_category__message_unread
+#: model:ir.model.fields,help:base_assets.field_res_asset__message_unread
+msgid "If checked new messages require your attention."
+msgstr "查看是否有需要留意的新消息。"
+
+#. module: base_assets
+#: model:ir.model.fields,help:base_assets.field_asset_category__message_needaction
+#: model:ir.model.fields,help:base_assets.field_res_asset__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "确认后, 出现提示消息."
+
+#. module: base_assets
+#: model:ir.model.fields,help:base_assets.field_asset_category__message_has_error
+#: model:ir.model.fields,help:base_assets.field_res_asset__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果勾选此项， 某些消息将会产生传递错误。"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__value
+msgid "In Value"
+msgstr ""
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_product_product__is_asset
+#: model:ir.model.fields,field_description:base_assets.field_product_template__is_asset
+msgid "Is Asset"
+msgstr "是否是资产"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_is_follower
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_is_follower
+msgid "Is Follower"
+msgstr "关注者"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__journal_id
+msgid "Journal"
+msgstr "日记账"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category____last_update
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line____last_update
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line____last_update
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order____last_update
+#: model:ir.model.fields,field_description:base_assets.field_res_asset____last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__write_uid
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__write_uid
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__write_uid
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__write_uid
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__write_date
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__write_date
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__write_date
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__write_date
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__line_ids
+msgid "Line"
+msgstr "行"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__location_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__location_id
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__location_id
+msgid "Location"
+msgstr "位置"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_main_attachment_id
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "附件"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__manufacturer_id
+msgid "Manufacturer"
+msgstr "制造商"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_has_error
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_has_error
+msgid "Message Delivery error"
+msgstr "消息递送错误"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_ids
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__value_min
+msgid "Min Value"
+msgstr ""
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__name
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__name
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__name
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__name
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__name
+msgid "Name"
+msgstr "名称"
+
+#. module: base_assets
+#: selection:purchase.order,order_type:0
+#: selection:purchase.order.line,order_type:0
+msgid "Normal"
+msgstr "产品"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_purchase_order__order_type
+msgid "Normal/Asset"
+msgstr "产品/资产"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__note
+msgid "Note"
+msgstr "备注"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__note
+msgid "Notes"
+msgstr "便签"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_needaction_counter
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_needaction_counter
+msgid "Number of Actions"
+msgstr "操作次数"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_has_error_counter
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_has_error_counter
+msgid "Number of error"
+msgstr "错误个数"
+
+#. module: base_assets
+#: model:ir.model.fields,help:base_assets.field_asset_category__message_needaction_counter
+#: model:ir.model.fields,help:base_assets.field_res_asset__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要操作消息数量"
+
+#. module: base_assets
+#: model:ir.model.fields,help:base_assets.field_asset_category__message_has_error_counter
+#: model:ir.model.fields,help:base_assets.field_res_asset__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "递送错误消息数量"
+
+#. module: base_assets
+#: model:ir.model.fields,help:base_assets.field_asset_category__message_unread_counter
+#: model:ir.model.fields,help:base_assets.field_res_asset__message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读消息数量"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_form_view
+#: selection:res.asset,state:0
+msgid "Open"
+msgstr "打开"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__order_id
+#: model:ir.ui.menu,name:base_assets.menu_asset_order
+msgid "Order"
+msgstr "订单"
+
+#. module: base_assets
+#: selection:asset.picking.order,type:0
+msgid "Own"
+msgstr "所属"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__owner_department_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__owner_department_id
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__owner_department_id
+msgid "Own Department"
+msgstr "所属部门"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__owner_employee_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__owner_employee_id
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__owner_employee_id
+msgid "Own Employee"
+msgstr "所属员工"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__parent_id
+msgid "Parent"
+msgstr "上级"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__picking_ids
+msgid "Picking"
+msgstr "分拣"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__picking_count
+msgid "Picking Count"
+msgstr "领取数"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_form_view
+msgid "Picking Line"
+msgstr ""
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__type
+msgid "Picking Type"
+msgstr ""
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_product_product
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__product_id
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__product_id
+msgid "Product"
+msgstr "产品"
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_product_template
+msgid "Product Template"
+msgstr "产品模板"
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_purchase_order
+msgid "Purchase Order"
+msgstr "采购订单"
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "采购订单行"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_purchase_order_line__order_type
+msgid "Purchase Order Type"
+msgstr "采购订单类型"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__value_residual
+msgid "Residual Value"
+msgstr "剩余价值"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__sn
+msgid "SN"
+msgstr ""
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_depreciation_line__state
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__state
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__state
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__state
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_search
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_search
+msgid "Status"
+msgstr "状态"
+
+#. module: base_assets
+#: selection:asset.picking.order,type:0
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_form_view
+msgid "Stock"
+msgstr "库存"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_form_view
+msgid "Stock Line"
+msgstr "库存明细"
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_stock_move
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__stock_move_ids
+msgid "Stock Move"
+msgstr "库存移动"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_form_view
+msgid "Stock Picking"
+msgstr "库存领取"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__supplier_id
+msgid "Supplier"
+msgstr "供应商"
+
+#. module: base_assets
+#: sql_constraint:asset.category:0
+msgid "The code of the Assets must be unique !"
+msgstr "资产编号必须唯一"
+
+#. module: base_assets
+#: model_terms:ir.actions.act_window,help:base_assets.action_purchase_order_asset
+msgid "The quotation contains the history of the discussion\n"
+"            you had with your vendor."
+msgstr "报价中包含您与供应商讨论的历史"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_move_line_form_view
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_form_view
+msgid "Trans"
+msgstr ""
+
+#. module: base_assets
+#: selection:asset.picking.order,type:0
+#: model:ir.model,name:base_assets.model_stock_picking
+msgid "Transfer"
+msgstr "调拨"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_unread
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_unread
+msgid "Unread Messages"
+msgstr "未读消息"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__message_unread_counter
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读消息计数器"
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_res_users
+msgid "Users"
+msgstr "用户"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_form_view
+msgid "Value"
+msgstr "值"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_move_line__warehouse_id
+#: model:ir.model.fields,field_description:base_assets.field_asset_picking_order__warehouse_id
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__warehouse_id
+msgid "Warehouse"
+msgstr "仓库"
+
+#. module: base_assets
+#: model:ir.model.fields,field_description:base_assets.field_asset_category__website_message_ids
+#: model:ir.model.fields,field_description:base_assets.field_res_asset__website_message_ids
+msgid "Website Messages"
+msgstr "网站消息"
+
+#. module: base_assets
+#: model:ir.model.fields,help:base_assets.field_asset_category__website_message_ids
+#: model:ir.model.fields,help:base_assets.field_res_asset__website_message_ids
+msgid "Website communication history"
+msgstr "网站沟通记录"
+
+#. module: base_assets
+#: code:addons/base_assets/models/ResAsset.py:93
+#, python-format
+msgid "You cannot delete a asset that contains posted depreciation or openration."
+msgstr "您不能删除包含已公布的折旧或打开的资产。"
+
+#. module: base_assets
+#: code:addons/base_assets/models/ResAsset.py:90
+#, python-format
+msgid "You cannot delete a asset that is in %s state."
+msgstr "您不能删除处于%s状态的资产。"
+
+#. module: base_assets
+#: model:ir.actions.act_window,name:base_assets.asset_category_action
+msgid "asset.category"
+msgstr "资产类别"
+
+#. module: base_assets
+#: model:ir.model,name:base_assets.model_asset_depreciation_line
+msgid "asset.depreciation.line"
+msgstr "资产折旧明细"
+
+#. module: base_assets
+#: model:ir.actions.act_window,name:base_assets.asset_move_line_action
+msgid "asset.move.line"
+msgstr "资产移动行"
+
+#. module: base_assets
+#: model:ir.actions.act_window,name:base_assets.asset_picking_order_action
+msgid "asset.picking.order"
+msgstr "资产领取单"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_form_view
+msgid "cancel"
+msgstr "取消"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_category_search
+msgid "closed"
+msgstr "关闭"
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_form_view
+msgid "context=\"{\n"
+"                            'default_dest_owner_employee_id': dest_owner_employee_id,\n"
+"                            'default_dest_owner_department_id': dest_owner_department_id,\n"
+"                            'default_dest_employee_id': dest_employee_id,\n"
+"                            'default_dest_department_id': dest_department_id,\n"
+"                            'default_dest_warehouse_id': dest_warehouse_id,\n"
+"                            'default_dest_location_id': dest_location_id,\n"
+"                            }\""
+msgstr ""
+
+#. module: base_assets
+#: model_terms:ir.ui.view,arch_db:base_assets.asset_picking_order_search
+#: model_terms:ir.ui.view,arch_db:base_assets.res_asset_search
+msgid "open"
+msgstr "打开"
+
+#. module: base_assets
+#: model:ir.actions.act_window,name:base_assets.res_asset_action
+msgid "res.asset"
+msgstr "资产"
+

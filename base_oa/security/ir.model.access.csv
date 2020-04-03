@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+oa_process_type_public,oa.process.type.public,model_oa_process_type,,1,0,0,0
+oa_process_public,oa.process.public,model_oa_process,,1,0,0,0
+oa_process_step_public,oa.process.step.public,model_oa_process_step,,1,0,0,0
+oa_task_public,oa.task.public,model_oa_task,,1,1,1,1
+oa_task_detail_public,oa.task.detail.public,model_oa_task_detail,,1,1,1,1
+oa_process_type_oa_manager,oa.process.type.oa.manager,model_oa_process_type,group_oa_manager,1,1,1,1
+oa_process_oa_manager,oa.process.oa.manager,model_oa_process,group_oa_manager,1,1,1,1
+oa_process_step_oa_manager,oa.process.step.oa.manager,model_oa_process_step,group_oa_manager,1,1,1,1
+oa_task_oa_manager,oa.task.oa.manager,model_oa_task,group_oa_manager,1,1,1,1
+oa_task_detail_oa_manager,oa.task.detail.oa.manager,model_oa_task_detail,group_oa_manager,1,1,1,1

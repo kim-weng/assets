@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_template_form_view_inherit" model="ir.ui.view">
+            <field name="name">product.template.common.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='options']"  position="inside">
+                    <div>
+                        <field name="is_asset"/>
+                        <label for="is_asset"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='categ_id']"  position="after">
+                    <field name="asset_category_id"/>
+                </xpath>
+            </field>
+    </record>
+
+    <record id="product_template_search_view_inherit" model="ir.ui.view">
+        <field name="name">product.template.search</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='filter_to_sell']" position="after">
+                <filter string="Asset" name="filter_to_asset" domain="[('is_asset','=',1)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_template_action_assets" model="ir.actions.act_window">
+        <field name="name">Assets Products</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_type">form</field>
+        <field name="context">{'search_default_filter_to_asset': 1, 'default_is_asset':True, 'select_asset': True}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new product
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="product_template_action_assets" id="menu_product_template" name="Assets Products"
+        parent="menu_asset_base" sequence="30"/>
+
+</odoo>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="oa_process_form_view" model="ir.ui.view">
+        <field name="name">OA Process Form</field>
+        <field name="model">oa.process</field>
+        <field name="arch" type="xml">
+            <form string="OA Process">
+                <header>
+                </header>
+                <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                </div>
+                <group>
+                    <field name="code"/>
+                    <field name="oa_process_type"/>
+                    <field name="description"/>
+                </group>
+                <group>
+                    <field name="model"/>
+                    <field name="done_func"/>
+                    <field name="cancel_func"/>
+                </group>
+                <group>
+                    <field name="step_ids">
+                        <tree editable="bottom">
+                            <field name="seq" />
+                            <field name="code" />
+                            <field name="name" />
+                            <field name="group_id" />
+                            <field name="done_func"/>
+                            <field name="cancel_func"/>
+                            <field name="description" />
+                        </tree>
+                        <form>
+                            <group>
+                                <field name="seq" />
+                                <field name="code" />
+                                <field name="name" />
+                                <field name="group_id" />
+                                <field name="done_func"/>
+                                <field name="cancel_func"/>
+                                <field name="description" />
+                            </group>
+                        </form>
+                    </field>
+                </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="oa_process_tree_view" model="ir.ui.view">
+        <field name="name">OA Process Tree</field>
+        <field name="model">oa.process</field>
+        <field name="arch" type="xml">
+            <tree string="OA Process">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="oa_process_type"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="oa_process_search" model="ir.ui.view">
+        <field name="name">OA Process Filter</field>
+        <field name="model">oa.process</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="oa_process_type"/>
+                <group expand="0" string="Group By...">
+                    <filter name="group_by_type" string="Process Type" context="{'group_by':'oa_process_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="oa_process_action" model="ir.actions.act_window">
+        <field name="name">OA Process</field>
+        <field name="res_model">oa.process</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to create new record.
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="oa_process_action" id="menu_oa_process" name="OA Process"
+        parent="menu_oa_setting" sequence="20"/>
+
+</odoo>

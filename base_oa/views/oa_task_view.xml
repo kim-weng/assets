@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="oa_task_form_view" model="ir.ui.view">
+        <field name="name">OA Task Form</field>
+        <field name="model">oa.task</field>
+        <field name="arch" type="xml">
+            <form string="OA Task">
+                <header>
+                    <button name="action_do" string="Next" type="object" class="oe_highlight"
+                        attrs="{'invisible': [('state', 'in', ('done', 'cancel'))]}"/>
+                    <button name="action_refuse" string="Refuse" type="object" class="oe_highlight"
+                        attrs="{'invisible': [('state', 'in', ('done', 'cancel'))]}"/>
+                    <button name="action_draft" string="Restart" type="object"
+                        attrs="{'invisible': [('state', 'not in', ('cancel'))]}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,process,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="process_id"/>
+                        <field name="task_content"/>
+                        <field name="process_line_id"/>
+                        <field name="reference" widget="reference"/>
+                        <field name="res_model"/>
+                        <field name="res_id"/>
+                    </group>
+                    <group>
+                        <field name="lines">
+                            <tree editable="bottom">
+                                <field name="name" />
+                                <field name="handle_content" />
+                                <field name="handler_id" />
+                                <field name="date" />
+                                <field name="state" />
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="oa_task_tree_view" model="ir.ui.view">
+        <field name="name">OA Task Tree</field>
+        <field name="model">oa.task</field>
+        <field name="arch" type="xml">
+            <tree string="OA Task">
+                <field name="name"/>
+                <field name="process_id"/>
+                <field name="task_content"/>
+                <field name="process_line_id"/>
+                <field name="reference" widget="reference"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="oa_task_search" model="ir.ui.view">
+        <field name="name">OA Task Filter</field>
+        <field name="model">oa.task</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="oa_task_action" model="ir.actions.act_window">
+        <field name="name">OA Task</field>
+        <field name="res_model">oa.task</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to create new record.
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="oa_task_action" id="menu_oa_task" name="OA Task"
+        parent="menu_oa_data" sequence="10"/>
+
+</odoo>

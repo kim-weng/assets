@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_oa_root" name="OA" sequence="80"/>
+    <menuitem id="menu_oa_data" name="OA Data" parent="menu_oa_root" sequence="10"/>
+    <menuitem id="menu_oa_setting" name="OA Setting" parent="menu_oa_root" sequence="20"/>
+</odoo>

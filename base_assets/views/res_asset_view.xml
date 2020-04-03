@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_asset_form_view" model="ir.ui.view">
+        <field name="name">res.asset Form</field>
+        <field name="model">res.asset</field>
+        <field name="arch" type="xml">
+            <form string="Asset">
+                <header>
+                    <button name="action_open" string="Open" type="object" states="draft" class="btn-primary"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="code"/>
+                        <field name="name"/>
+                    </h1>
+                </div>
+                <group string="Base Imformation" id="base">
+                    <field name="product_id"/>
+                    <field name="sn"/>
+                    <field name="category_id"/>
+                    <field name="company_id"/>
+                </group>
+                <group string="Value" id="value">
+                    <field name="value"/>
+                    <field name="value_residual"/>
+                    <field name="value_min"/>
+                    <field name="currency_id"/>
+                </group>
+                <group string="Detail Imformation">
+                    <field name="supplier_id"/>
+                    <field name="manufacturer_id"/>
+                    <field name="active"/>
+                    <field name="note"/>
+                    <field name="date"/>
+                </group>
+                <group string="Stock" id="stock">
+                    <field name="owner_employee_id"/>
+                    <field name="owner_department_id"/>
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="warehouse_id"/>
+                    <field name="location_id"/>
+                </group>
+                <notebook>
+                    <page string="Depreciation" id="depreciation">
+                        <field name="depreciation_line_ids">
+                        </field>
+                    </page>
+                    <page string="History Lines" id="history">
+                        <field name="move_line_ids">
+                        </field>
+                    </page>
+                    <page string="Stock" id="stock">
+                        <field name="move_ids">
+                        </field>
+                    </page>
+                </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="res_asset_tree_view" model="ir.ui.view">
+        <field name="name">res.asset Tree</field>
+        <field name="model">res.asset</field>
+        <field name="arch" type="xml">
+            <tree string="Asset">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="sn"/>
+                <field name="product_id"/>
+                <field name="value"/>
+                <field name="value_residual"/>
+                <field name="value_min"/>
+                <field name="company_id"/>
+                <field name="supplier_id"/>
+                <field name="manufacturer_id"/>
+                <field name="category_id"/>
+                <field name="date"/>
+                <field name="state"/>
+                <field name="owner_employee_id"/>
+                <field name="owner_department_id"/>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="location_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="res_asset_search" model="ir.ui.view">
+        <field name="name">res.asset Filter</field>
+        <field name="model">res.asset</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter name="open" string="open" domain="[('state','=', 'draft')]"/>
+                <group expand="0" string="Group By...">
+                    <filter name="group_by_state" string="Status" context="{'group_by':'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="res_asset_action" model="ir.actions.act_window">
+        <field name="name">res.asset</field>
+        <field name="res_model">res.asset</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to create new record.
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="res_asset_action" id="menu_res_asset" name="Asset"
+        parent="menu_asset_base" sequence="20"/>
+
+</odoo>

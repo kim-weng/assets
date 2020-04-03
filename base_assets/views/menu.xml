@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="menu_employee"
+        name="Employee"
+        action="hr.open_view_employee_list_my"
+        parent="menu_asset_base"
+        sequence="40"/>
+
+    <menuitem
+        id="menu_department"
+        name="Department"
+        action="hr.open_module_tree_department"
+        parent="menu_asset_base"
+        sequence="50"/>
+</odoo>

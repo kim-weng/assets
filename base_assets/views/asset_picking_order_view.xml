@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="asset_picking_order_form_view" model="ir.ui.view">
+        <field name="name">asset.picking.order Form</field>
+        <field name="model">asset.picking.order</field>
+        <field name="arch" type="xml">
+            <form string="Asset Picking">
+                <header>
+                    <button name="action_comfirm" string="Comfirm" states="draft" type="object" class="btn-primary"/>
+                    <button name="action_done" string="Done" states="confirm" type="object" class="btn-primary"/>
+                    <button name="action_cancel" string="cancel"
+                        attrs="{'invisible': [('state', 'in', ['cancel', 'done'])]}" type="object"/>
+                    <button name="action_view_picking" string="Stock Picking"
+                        attrs="{'invisible': [('picking_count', '=', 0)]}" type="object"/>
+                    <button name="next_oa" string="Start OA" type="object" class="oe_highlight"/>
+                    <button name="next_oa" string="Next OA" type="object" class="oe_highlight"/>
+                    <button name="action_view_oa" string="View OA" type="object"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                </div>
+                <group string="Base" name="base">
+                    <field name="apply_employee_id"/>
+                    <field name="apply_department_id"/>
+                    <field name="date"/>
+                    <field name="type"/>
+                    <field name="picking_ids" widget="many2many_tags"/>
+                    <field name="picking_count" invisible="True" />
+                    <field name="company_id"/>
+                </group>
+                <group string="Trans" name="trans">
+                    <group name="group_left">
+                        <field name="owner_employee_id"/>
+                        <field name="owner_department_id"/>
+                        <field name="employee_id"/>
+                        <field name="department_id"/>
+                        <field name="warehouse_id"/>
+                        <field name="location_id"/>
+                    </group>
+                    <group name="group_right">
+                        <field name="dest_owner_employee_id"/>
+                        <field name="dest_owner_department_id"/>
+                        <field name="dest_employee_id"/>
+                        <field name="dest_department_id"/>
+                        <field name="dest_warehouse_id"/>
+                        <field name="dest_location_id"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Picking Line">
+                        <field name="line_ids"
+                            context="{
+                            'default_owner_employee_id': owner_employee_id,
+                            'default_owner_department_id': owner_department_id,
+                            'default_employee_id': employee_id,
+                            'default_department_id': department_id,
+                            'default_warehouse_id': warehouse_id,
+                            'default_location_id': location_id,
+                            'default_dest_owner_employee_id': dest_owner_employee_id,
+                            'default_dest_owner_department_id': dest_owner_department_id,
+                            'default_dest_employee_id': dest_employee_id,
+                            'default_dest_department_id': dest_department_id,
+                            'default_dest_warehouse_id': dest_warehouse_id,
+                            'default_dest_location_id': dest_location_id,
+                            }">
+                            <form string="Asset Move Line">
+                                <sheet>
+                                    <group string="Base" name="base">
+                                        <group name="group_left">
+                                            <field name="name"/>
+                                            <field name="order_id"/>
+                                            <field name="state"/>
+                                        </group>
+                                        <group name="group_right">
+                                            <field name="asset_id"/>
+                                            <field name="product_id"/>
+                                            <field name="date"/>
+                                            <field name="company_id"/>
+                                        </group>
+                                    </group>
+                                    <group string="Trans" name="trans">
+                                        <group name="group_left">
+                                            <field name="owner_employee_id"/>
+                                            <field name="owner_department_id"/>
+                                            <field name="employee_id"/>
+                                            <field name="department_id"/>
+                                            <field name="warehouse_id"/>
+                                            <field name="location_id"/>
+                                        </group>
+                                        <group name="group_right">
+                                            <field name="dest_owner_employee_id"/>
+                                            <field name="dest_owner_department_id"/>
+                                            <field name="dest_employee_id"/>
+                                            <field name="dest_department_id"/>
+                                            <field name="dest_warehouse_id"/>
+                                            <field name="dest_location_id"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+                            <tree editable="bottom" string="Asset Move Line">
+                                <field name="owner_employee_id" invisible="True"/>
+                                <field name="owner_department_id" invisible="True"/>
+                                <field name="employee_id" invisible="True"/>
+                                <field name="department_id" invisible="True"/>
+                                <field name="warehouse_id" invisible="True"/>
+                                <field name="location_id" invisible="True"/>
+                                <field name="asset_id"/>
+                                <field name="product_id" invisible="True"/>
+                                <field name="date"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Stock Line">
+                        <field name="stock_move_ids">
+                        </field>
+                    </page>
+                </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="asset_picking_order_tree_view" model="ir.ui.view">
+        <field name="name">asset.picking.order Tree</field>
+        <field name="model">asset.picking.order</field>
+        <field name="arch" type="xml">
+            <tree string="Asset Picking">
+                <field name="name"/>
+                <field name="apply_employee_id"/>
+                <field name="apply_department_id"/>
+                <field name="date"/>
+                <field name="type"/>
+                <field name="state"/>
+                <field name="company_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="asset_picking_order_search" model="ir.ui.view">
+        <field name="name">asset.picking.order Filter</field>
+        <field name="model">asset.picking.order</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter name="open" string="open" domain="[('state','=', 'confirm')]"/>
+                <group expand="0" string="Group By...">
+                    <filter name="group_by_apply_department_id" string="Department" context="{'group_by':'apply_department_id'}"/>
+                    <filter name="group_by_state" string="Status" context="{'group_by':'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="asset_picking_order_action" model="ir.actions.act_window">
+        <field name="name">asset.picking.order</field>
+        <field name="res_model">asset.picking.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{"search_default_group_by_state":True}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to create new record.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_asset_order" name="Order" sequence="20" parent="menu_asset_root"/>
+    <menuitem action="asset_picking_order_action" id="menu_asset_picking_order" name="Asset Picking"
+        parent="menu_asset_order" sequence="20"/>
+
+</odoo>

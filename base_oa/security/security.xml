@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.module.category" id="module_oa">
+            <field name="name">OA</field>
+            <field name="description">OA</field>
+        </record>
+
+        <record id="group_oa_manager" model="res.groups">
+            <field name="name">OA Manager</field>
+            <field name="category_id" ref="module_oa"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+    </data>
+</odoo>
