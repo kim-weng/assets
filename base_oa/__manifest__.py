@@ -2,7 +2,7 @@
 
 {
     "name": "Base OA",
-    "version": "12.0",
+    "version": "12.0.1",
     "category" : "",
     "summary": "OA",
     "description": """OA
